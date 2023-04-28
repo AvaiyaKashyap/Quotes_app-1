@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:quotes_app/view/screen/quotesHomePage.dart';
-
 import '../../controller/helper/QuotesGlobal.dart';
 
 class QuotesCategory extends StatefulWidget {
@@ -47,9 +45,34 @@ class _QuotesCategoryState extends State<QuotesCategory> {
                     crossAxisCount: 2),
                 children: Global.categoryS
                     .map((e) => Container(
-                        margin: EdgeInsets.all(5),
+                        margin: const EdgeInsets.all(5),
                         color: e['color'],
-                        child: Text("${e['category']}")))
+                        child: Column(
+                          children: [
+                            Align(
+                              alignment: Alignment.topLeft,
+                              child: Text(
+                                "${e['category']}",
+                              ),
+                            ),
+                            const Spacer(),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Align(
+                                alignment: Alignment.bottomRight,
+                                child: Image.asset(
+                                  '${e['image']}',
+                                  height: 100,
+                                  width: 100,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 5,
+                            ),
+                          ],
+                        )))
                     .toList(),
               ),
             ),
