@@ -2,6 +2,35 @@ import 'package:flutter/material.dart';
 
 class Global {
   static String endpoint = "";
+  static List lifeQuote = [
+    "if You change the way you look at things, the things you look at change.",
+    "the way i see it you want the rainbow,you gotta put up with the rain.",
+    "life is much better when you are living in the present moment.",
+    "don't waste your time in anger,regrets,worries and grudges because life is too short to be happy.",
+    "Be there for other, but  never leave your self behind.",
+    "Not in doing what you like,but in liking what you do is the secret of happiness.",
+  ];
+  static List lifeQuoteColorBG = [
+    Colors.red.shade300,
+    Colors.pink.shade300,
+    Colors.purple.shade300,
+    Colors.deepPurple.shade300,
+    Colors.indigo.shade300,
+    Colors.blue.shade300,
+    Colors.lightBlue.shade300,
+    Colors.cyan.shade300,
+    Colors.teal.shade300,
+    Colors.green.shade300,
+    Colors.lightGreen.shade300,
+    Colors.lime.shade300,
+    Colors.yellow.shade300,
+    Colors.amber.shade300,
+    Colors.orange.shade300,
+    Colors.deepOrange.shade300,
+    Colors.brown.shade300,
+  ];
+  static List lifeQuoteColorText = [];
+
   static List category = [
     'age'
         'alone'
