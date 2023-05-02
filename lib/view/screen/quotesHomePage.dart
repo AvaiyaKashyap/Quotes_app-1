@@ -1,5 +1,6 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
+import '../../controller/helper/QuotesGlobal.dart';
 import '../../controller/helper/quotesApiHelper.dart';
 import '../../modal/quotesModal.dart';
 
@@ -36,12 +37,14 @@ class _QuotesHomePageState extends State<QuotesHomePage> {
     Colors.deepOrange.shade200,
     Colors.brown.shade200,
   ];
+
   bool isFav = false;
   @override
   Widget build(BuildContext context) {
     String data = ModalRoute.of(context)!.settings.arguments as String;
     Random r1 = Random();
-    int n1 = r1.nextInt(6);
+    int n1 = r1.nextInt(18);
+    int n2 = r1.nextInt(18);
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
@@ -57,7 +60,7 @@ class _QuotesHomePageState extends State<QuotesHomePage> {
                   child: Text("ERROR:- ${snp.error}"),
                 );
               } else if (snp.hasData) {
-                print('${snp.data}');
+                // print('${snp.data}');
                 List<Quotes>? data = snp.data;
                 return (data != null)
                     ? ListView.builder(
@@ -69,16 +72,20 @@ class _QuotesHomePageState extends State<QuotesHomePage> {
                                 height: 450,
                                 width: double.infinity,
                                 decoration: BoxDecoration(
-                                  border: Border.all(
-                                    width: 3,
-                                    color: Colors.black,
-                                  ),
-                                  color: Colors.black,
-                                  borderRadius: const BorderRadius.vertical(
+                                  image: DecorationImage(
+                                      image:
+                                          AssetImage("${Global.bGImage[n2]}"),
+                                      fit: BoxFit.cover),
+                                  // border: Border.all(
+                                  //   width: 3,
+                                  //   // color: Colors.black,
+                                  // ),
+                                  // color: Colors.black,
+                                  borderRadius: BorderRadius.vertical(
                                       top: Radius.circular(20)),
                                 ),
                                 child: Padding(
-                                  padding: const EdgeInsets.all(10),
+                                  padding: const EdgeInsets.all(16),
                                   child: Center(
                                     child: Text(
                                       data[i].quote,
@@ -153,7 +160,9 @@ class _QuotesHomePageState extends State<QuotesHomePage> {
                                                 color: Colors.pink.shade900,
                                               )),
                                     OutlinedButton.icon(
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        setState(() {});
+                                      },
                                       label: const Text(
                                         "BG",
                                         style: TextStyle(color: Colors.grey),

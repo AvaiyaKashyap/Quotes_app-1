@@ -10,6 +10,26 @@ class Global {
     "Be there for other, but  never leave your self behind.",
     "Not in doing what you like,but in liking what you do is the secret of happiness.",
   ];
+  static List bGImage = [
+    'assets/image/bg1.jpg',
+    'assets/image/bg2.jpg',
+    'assets/image/bg3.jpg',
+    'assets/image/bg4.jpg',
+    'assets/image/bg5.jpg',
+    'assets/image/bg6.jpg',
+    'assets/image/bg7.jpg',
+    'assets/image/bg8.jpg',
+    'assets/image/bg9.jpg',
+    'assets/image/bg10.jpg',
+    'assets/image/bg11.jpg',
+    'assets/image/bg13.jpg',
+    'assets/image/bg14.jpg',
+    'assets/image/bg15.jpg',
+    'assets/image/bg16.jpg',
+    'assets/image/bg17.jpg',
+    'assets/image/bg18.jpg',
+    'assets/image/bg19.jpg',
+  ];
   static List lifeQuoteColorBG = [
     Colors.red.shade300,
     Colors.pink.shade300,
