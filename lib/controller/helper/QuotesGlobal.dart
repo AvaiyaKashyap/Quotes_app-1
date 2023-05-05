@@ -10,26 +10,101 @@ class Global {
     "Be there for other, but  never leave your self behind.",
     "Not in doing what you like,but in liking what you do is the secret of happiness.",
   ];
-  static List bGImage = [
-    'assets/image/bg1.jpg',
-    'assets/image/bg2.jpg',
-    'assets/image/bg3.jpg',
-    'assets/image/bg4.jpg',
-    'assets/image/bg5.jpg',
-    'assets/image/bg6.jpg',
-    'assets/image/bg7.jpg',
-    'assets/image/bg8.jpg',
-    'assets/image/bg9.jpg',
-    'assets/image/bg10.jpg',
-    'assets/image/bg11.jpg',
-    'assets/image/bg13.jpg',
-    'assets/image/bg14.jpg',
-    'assets/image/bg15.jpg',
-    'assets/image/bg16.jpg',
-    'assets/image/bg17.jpg',
-    'assets/image/bg18.jpg',
-    'assets/image/bg19.jpg',
+  // static List bGImage = [
+  //   'assets/image/bg1.jpg',
+  //   'assets/image/bg2.jpg',
+  //   'assets/image/bg3.jpg',
+  //   'assets/image/bg4.jpg',
+  //   'assets/image/bg5.jpg',
+  //   'assets/image/bg6.jpg',
+  //   'assets/image/bg7.jpg',
+  //   'assets/image/bg8.jpg',
+  //   'assets/image/bg9.jpg',
+  //   'assets/image/bg10.jpg',
+  //   'assets/image/bg11.jpg',
+  //   'assets/image/bg13.jpg',
+  //   'assets/image/bg14.jpg',
+  //   'assets/image/bg15.jpg',
+  //   'assets/image/bg16.jpg',
+  //   'assets/image/bg17.jpg',
+  //   'assets/image/bg18.jpg',
+  //   'assets/image/bg19.jpg',
+  // ];
+  static List<Map<String, dynamic>> myImage = [
+    {
+      'image': 'assets/image/bg1.jpg',
+    },
+    {
+      'image': 'assets/image/bg2.jpg',
+    },
+    {
+      'image': 'assets/image/bg3.jpg',
+    },
+    {
+      'image': 'assets/image/bg4.jpg',
+    },
   ];
+
+  static List<Map<String, dynamic>> myImage1 = [
+    {
+      'image': 'assets/image/bg5.jpg',
+    },
+    {
+      'image': 'assets/image/bg6.jpg',
+    },
+    {
+      'image': 'assets/image/bg7.jpg',
+    },
+    {
+      'image': 'assets/image/bg8.jpg',
+    },
+  ];
+
+  static List<Map<String, dynamic>> myImage2 = [
+    {
+      'image': 'assets/image/bg9.jpg',
+    },
+    {
+      'image': 'assets/image/bg10.jpg',
+    },
+    {
+      'image': 'assets/image/bg11.jpg',
+    },
+    {
+      'image': 'assets/image/bg12.jpg',
+    },
+  ];
+
+  static List<Map<String, dynamic>> myImage3 = [
+    {
+      'image': 'assets/image/bg13.jpg',
+    },
+    {
+      'image': 'assets/image/bg14.jpg',
+    },
+    {
+      'image': 'assets/image/bg15.jpg',
+    },
+    {
+      'image': 'assets/image/bg16.jpg',
+    },
+  ];
+
+  static List<Map<String, dynamic>> myImage4 = [
+    {
+      'image': 'assets/image/bg17.jpg',
+    },
+    {
+      'image': 'assets/image/bg19.jpg',
+    },
+    {
+      'image': 'assets/image/bg20.jpg',
+    },
+    {
+      'image': 'assets/image/bg18.jpg',
+    },
+  ];
+
   static List lifeQuoteColorBG = [
     Colors.red.shade300,
     Colors.pink.shade300,
@@ -445,6 +520,64 @@ class Global {
       'category': 'success',
       'image': 'assets/image/image65.png',
       'color': Colors.lightGreen.shade200,
+    },
+  ];
+
+  static List<Map<String, Color>> myColor = [
+    {
+      'colors': Colors.yellow.shade200,
+    },
+    {
+      'colors': Colors.purple.shade200,
+    },
+    {
+      'colors': Colors.blueGrey.shade200,
+    },
+    {
+      'colors': Colors.pink.shade200,
+    },
+  ];
+
+  static List<Map<String, Color>> myColor2 = [
+    {
+      'colors': Colors.green.shade200,
+    },
+    {
+      'colors': Colors.red.shade200,
+    },
+    {
+      'colors': Colors.blue.shade200,
+    },
+    {
+      'colors': Colors.cyan.shade200,
+    },
+  ];
+  static List<Map<String, Color>> myColor3 = [
+    {
+      'colors': Colors.teal.shade200,
+    },
+    {
+      'colors': Colors.orange.shade200,
+    },
+    {
+      'colors': Colors.brown.shade200,
+    },
+    {
+      'colors': Colors.amber.shade200,
+    },
+  ];
+  static List<Map<String, Color>> myColor4 = [
+    {
+      'colors': Colors.indigo.shade200,
+    },
+    {
+      'colors': Colors.lime.shade200,
+    },
+    {
+      'colors': Colors.deepOrange.shade200,
+    },
+    {
+      'colors': Colors.lightGreen.shade200,
     },
   ];
 }

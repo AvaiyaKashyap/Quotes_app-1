@@ -13,29 +13,9 @@ class QuotesHomePage extends StatefulWidget {
 }
 
 class _QuotesHomePageState extends State<QuotesHomePage> {
-  List<Color> bgColors = [
-    Colors.white,
-    Colors.red.shade200,
-    Colors.pink.shade200,
-    Colors.purple.shade200,
-    Colors.deepPurple.shade200,
-    Colors.indigo.shade200,
-    Colors.blue.shade200,
-    Colors.lightBlue.shade200,
-    Colors.cyan.shade200,
-    Colors.teal.shade200,
-    Colors.green.shade200,
-    Colors.lightGreen.shade200,
-    Colors.lime.shade200,
-    Colors.yellow.shade200,
-    Colors.amber.shade200,
-    Colors.orange.shade200,
-    Colors.deepOrange.shade200,
-    Colors.brown.shade200,
-  ];
-
   bool isFav = false;
   static GlobalKey previewContainer = GlobalKey();
+  dynamic myImage = 'assets/image/bg18.jpg';
 
   @override
   Widget build(BuildContext context) {
@@ -74,8 +54,7 @@ class _QuotesHomePageState extends State<QuotesHomePage> {
                                   width: double.infinity,
                                   decoration: BoxDecoration(
                                     image: DecorationImage(
-                                        image:
-                                            AssetImage("${Global.bGImage[n2]}"),
+                                        image: AssetImage("$myImage"),
                                         fit: BoxFit.cover),
                                     borderRadius: BorderRadius.circular((20)),
                                   ),
@@ -85,7 +64,7 @@ class _QuotesHomePageState extends State<QuotesHomePage> {
                                       child: Text(
                                         data[i].quote,
                                         style: TextStyle(
-                                            color: bgColors[n1],
+                                            color: myColor,
                                             fontWeight: FontWeight.bold,
                                             fontSize: 20),
                                       ),
@@ -139,7 +118,139 @@ class _QuotesHomePageState extends State<QuotesHomePage> {
                                     ),
                                     GestureDetector(
                                       onTap: () {
-                                        setState(() {});
+                                        showDialog(
+                                            context: context,
+                                            builder: (context) {
+                                              return AlertDialog(
+                                                content: Column(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .spaceAround,
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .center,
+                                                    mainAxisSize:
+                                                        MainAxisSize.min,
+                                                    children: [
+                                                      Row(
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .spaceAround,
+                                                        children: Global.myColor
+                                                            .map((e) =>
+                                                                GestureDetector(
+                                                                  onTap: () {
+                                                                    setState(
+                                                                        () {
+                                                                      myColor =
+                                                                          e['colors'];
+                                                                    });
+                                                                    Navigator.of(
+                                                                            context)
+                                                                        .pop();
+                                                                  },
+                                                                  child:
+                                                                      CircleAvatar(
+                                                                    radius: 14,
+                                                                    backgroundColor:
+                                                                        e['colors'],
+                                                                  ),
+                                                                ))
+                                                            .toList(),
+                                                      ),
+                                                      const SizedBox(
+                                                        height: 5,
+                                                      ),
+                                                      Row(
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .spaceAround,
+                                                        children: Global
+                                                            .myColor2
+                                                            .map((e) =>
+                                                                GestureDetector(
+                                                                  onTap: () {
+                                                                    setState(
+                                                                        () {
+                                                                      myColor =
+                                                                          e['colors'];
+                                                                    });
+                                                                    Navigator.of(
+                                                                            context)
+                                                                        .pop();
+                                                                  },
+                                                                  child:
+                                                                      CircleAvatar(
+                                                                    radius: 14,
+                                                                    backgroundColor:
+                                                                        e['colors'],
+                                                                  ),
+                                                                ))
+                                                            .toList(),
+                                                      ),
+                                                      const SizedBox(
+                                                        height: 5,
+                                                      ),
+                                                      Row(
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .spaceAround,
+                                                        children: Global
+                                                            .myColor3
+                                                            .map((e) =>
+                                                                GestureDetector(
+                                                                  onTap: () {
+                                                                    setState(
+                                                                        () {
+                                                                      myColor =
+                                                                          e['colors'];
+                                                                    });
+                                                                    Navigator.of(
+                                                                            context)
+                                                                        .pop();
+                                                                  },
+                                                                  child:
+                                                                      CircleAvatar(
+                                                                    radius: 14,
+                                                                    backgroundColor:
+                                                                        e['colors'],
+                                                                  ),
+                                                                ))
+                                                            .toList(),
+                                                      ),
+                                                      const SizedBox(
+                                                        height: 5,
+                                                      ),
+                                                      Row(
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .spaceAround,
+                                                        children: Global
+                                                            .myColor4
+                                                            .map((e) =>
+                                                                GestureDetector(
+                                                                  onTap: () {
+                                                                    setState(
+                                                                        () {
+                                                                      myColor =
+                                                                          e['colors'];
+                                                                    });
+                                                                    Navigator.of(
+                                                                            context)
+                                                                        .pop();
+                                                                  },
+                                                                  child:
+                                                                      CircleAvatar(
+                                                                    radius: 14,
+                                                                    backgroundColor:
+                                                                        e['colors'],
+                                                                  ),
+                                                                ))
+                                                            .toList(),
+                                                      ),
+                                                    ]),
+                                              );
+                                            });
                                       },
                                       child: Container(
                                         height: 100,
@@ -177,7 +288,194 @@ class _QuotesHomePageState extends State<QuotesHomePage> {
                                     ),
                                     GestureDetector(
                                       onTap: () {
-                                        setState(() {});
+                                        showDialog(
+                                            context: context,
+                                            builder: (context) {
+                                              return AlertDialog(
+                                                content: Column(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .spaceAround,
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .center,
+                                                    mainAxisSize:
+                                                        MainAxisSize.min,
+                                                    children: [
+                                                      Row(
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .spaceAround,
+                                                        children: Global.myImage
+                                                            .map((e) =>
+                                                                GestureDetector(
+                                                                  onTap: () {
+                                                                    setState(
+                                                                        () {
+                                                                      myImage =
+                                                                          e['image'];
+                                                                    });
+                                                                    Navigator.of(
+                                                                            context)
+                                                                        .pop();
+                                                                  },
+                                                                  child:
+                                                                      Container(
+                                                                    height: 50,
+                                                                    width: 50,
+                                                                    child: Image
+                                                                        .asset(
+                                                                      e['image'],
+                                                                      fit: BoxFit
+                                                                          .cover,
+                                                                    ),
+                                                                  ),
+                                                                ))
+                                                            .toList(),
+                                                      ),
+                                                      const SizedBox(
+                                                        height: 5,
+                                                      ),
+                                                      Row(
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .spaceAround,
+                                                        children: Global
+                                                            .myImage1
+                                                            .map((e) =>
+                                                                GestureDetector(
+                                                                  onTap: () {
+                                                                    setState(
+                                                                        () {
+                                                                      myImage =
+                                                                          e['image'];
+                                                                    });
+                                                                    Navigator.of(
+                                                                            context)
+                                                                        .pop();
+                                                                  },
+                                                                  child:
+                                                                      Container(
+                                                                    height: 50,
+                                                                    width: 50,
+                                                                    child: Image
+                                                                        .asset(
+                                                                      e['image'],
+                                                                      fit: BoxFit
+                                                                          .cover,
+                                                                    ),
+                                                                  ),
+                                                                ))
+                                                            .toList(),
+                                                      ),
+                                                      const SizedBox(
+                                                        height: 5,
+                                                      ),
+                                                      Row(
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .spaceAround,
+                                                        children: Global
+                                                            .myImage2
+                                                            .map((e) =>
+                                                                GestureDetector(
+                                                                  onTap: () {
+                                                                    setState(
+                                                                        () {
+                                                                      myImage =
+                                                                          e['image'];
+                                                                    });
+                                                                    Navigator.of(
+                                                                            context)
+                                                                        .pop();
+                                                                  },
+                                                                  child:
+                                                                      Container(
+                                                                    height: 50,
+                                                                    width: 50,
+                                                                    child: Image
+                                                                        .asset(
+                                                                      e['image'],
+                                                                      fit: BoxFit
+                                                                          .cover,
+                                                                    ),
+                                                                  ),
+                                                                ))
+                                                            .toList(),
+                                                      ),
+                                                      const SizedBox(
+                                                        height: 5,
+                                                      ),
+                                                      Row(
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .spaceAround,
+                                                        children: Global
+                                                            .myImage3
+                                                            .map((e) =>
+                                                                GestureDetector(
+                                                                  onTap: () {
+                                                                    setState(
+                                                                        () {
+                                                                      myImage =
+                                                                          e['image'];
+                                                                    });
+                                                                    Navigator.of(
+                                                                            context)
+                                                                        .pop();
+                                                                  },
+                                                                  child:
+                                                                      Container(
+                                                                    height: 50,
+                                                                    width: 50,
+                                                                    child: Image
+                                                                        .asset(
+                                                                      e['image'],
+                                                                      fit: BoxFit
+                                                                          .cover,
+                                                                    ),
+                                                                  ),
+                                                                ))
+                                                            .toList(),
+                                                      ),
+                                                      const SizedBox(
+                                                        height: 5,
+                                                      ),
+                                                      Row(
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .spaceAround,
+                                                        children: Global
+                                                            .myImage4
+                                                            .map((e) =>
+                                                                GestureDetector(
+                                                                  onTap: () {
+                                                                    setState(
+                                                                        () {
+                                                                      myImage =
+                                                                          e['image'];
+                                                                    });
+                                                                    Navigator.of(
+                                                                            context)
+                                                                        .pop();
+                                                                  },
+                                                                  child:
+                                                                      Container(
+                                                                    height: 50,
+                                                                    width: 50,
+                                                                    child: Image
+                                                                        .asset(
+                                                                      e['image'],
+                                                                      fit: BoxFit
+                                                                          .cover,
+                                                                    ),
+                                                                  ),
+                                                                ))
+                                                            .toList(),
+                                                      ),
+                                                    ]),
+                                              );
+                                            });
                                       },
                                       child: Container(
                                         height: 100,
@@ -249,3 +547,5 @@ class _QuotesHomePageState extends State<QuotesHomePage> {
     );
   }
 }
+
+dynamic myColor = Colors.white;
