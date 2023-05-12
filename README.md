@@ -13,4 +13,5 @@
 <img src = "https://user-images.githubusercontent.com/122794880/236535460-39c529ce-4800-4fc6-bc0c-d5bff3943055.jpeg" height="500px"/> |
 <img src = "https://user-images.githubusercontent.com/122794880/236535480-6db3c25a-a5df-4b02-9c22-9c0a3581517f.jpeg" height="500px"/> |
 <img src = "https://user-images.githubusercontent.com/122794880/236535530-be4e128d-951f-481d-958b-7f398b6ef86d.jpeg" height="500px"/> |
+<img src = "https://github.com/khushibhadani22/Quotes_app/assets/122794880/6e1deb29-7a09-40d2-93d1-b2ea89acbdde" height="500px"/> 
 
