@@ -24,22 +24,6 @@ class _QuotesCategoryState extends State<QuotesCategory> {
       body: Column(
         children: [
           Expanded(
-              flex: 2,
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: TextFormField(
-                  textAlign: TextAlign.left,
-                  style: const TextStyle(fontWeight: FontWeight.bold),
-                  decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(50),
-                      ),
-                      hintText: "Search...",
-                      prefixIcon: const Icon(Icons.search)),
-                ),
-              )),
-          Expanded(
-            flex: 21,
             child: Padding(
               padding: const EdgeInsets.all(10),
               child: GridView(

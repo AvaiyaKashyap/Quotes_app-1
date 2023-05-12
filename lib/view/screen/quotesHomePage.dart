@@ -1,5 +1,9 @@
+import 'dart:io';
 import 'dart:math';
+import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:path_provider/path_provider.dart';
 import 'package:share_plus/share_plus.dart';
 import '../../controller/helper/QuotesGlobal.dart';
 import '../../controller/helper/quotesApiHelper.dart';
@@ -16,6 +20,7 @@ class _QuotesHomePageState extends State<QuotesHomePage> {
   bool isFav = false;
   static GlobalKey previewContainer = GlobalKey();
   dynamic myImage = 'assets/image/bg18.jpg';
+  GlobalKey imageKey = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
@@ -49,24 +54,27 @@ class _QuotesHomePageState extends State<QuotesHomePage> {
                           itemBuilder: (context, i) {
                             return Column(
                               children: [
-                                Container(
-                                  height: 450,
-                                  width: double.infinity,
-                                  decoration: BoxDecoration(
-                                    image: DecorationImage(
-                                        image: AssetImage("$myImage"),
-                                        fit: BoxFit.cover),
-                                    borderRadius: BorderRadius.circular((20)),
-                                  ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(16),
-                                    child: Center(
-                                      child: Text(
-                                        data[i].quote,
-                                        style: TextStyle(
-                                            color: myColor,
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 20),
+                                RepaintBoundary(
+                                  key: imageKey,
+                                  child: Container(
+                                    height: 450,
+                                    width: double.infinity,
+                                    decoration: BoxDecoration(
+                                      image: DecorationImage(
+                                          image: AssetImage("$myImage"),
+                                          fit: BoxFit.cover),
+                                      borderRadius: BorderRadius.circular((20)),
+                                    ),
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(16),
+                                      child: Center(
+                                        child: Text(
+                                          data[i].quote,
+                                          style: TextStyle(
+                                              color: myColor,
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 20),
+                                        ),
                                       ),
                                     ),
                                   ),
@@ -79,8 +87,30 @@ class _QuotesHomePageState extends State<QuotesHomePage> {
                                       MainAxisAlignment.spaceAround,
                                   children: [
                                     GestureDetector(
-                                      onTap: () {
-                                        Share.share(data[i].quote);
+                                      onTap: () async {
+                                        RenderRepaintBoundary boundary =
+                                            imageKey.currentContext!
+                                                    .findRenderObject()
+                                                as RenderRepaintBoundary;
+                                        var img = await boundary.toImage(
+                                          pixelRatio: 5,
+                                        );
+                                        var bit = await img.toByteData(
+                                            format: ImageByteFormat.png);
+                                        var uList = bit!.buffer.asUint8List();
+
+                                        if (uList != null) {
+                                          Directory dir =
+                                              await getApplicationDocumentsDirectory();
+
+                                          DateTime d = DateTime.now();
+                                          File file = await File(
+                                                  "${dir.path}/FA${d.year}${d.month}${d.day}${d.hour}${d.minute}${d.second}.png")
+                                              .create();
+                                          await file.writeAsBytes(uList);
+
+                                          Share.shareXFiles([XFile(file.path)]);
+                                        }
                                       },
                                       child: Container(
                                         height: 100,

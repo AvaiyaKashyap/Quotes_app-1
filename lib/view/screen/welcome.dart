@@ -14,7 +14,7 @@ class WelcomePage extends StatefulWidget {
 
 class _WelcomePageState extends State<WelcomePage> {
   welcomePage() async {
-    Timer(const Duration(seconds: 10), () {
+    Timer(const Duration(seconds: 7), () {
       Navigator.of(context).pushReplacementNamed('/');
     });
   }
