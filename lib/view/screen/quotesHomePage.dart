@@ -336,8 +336,7 @@ class _QuotesHomePageState extends State<QuotesHomePage> {
                                                                           context)
                                                                       .pop();
                                                                 },
-                                                                child:
-                                                                    Container(
+                                                                child: SizedBox(
                                                                   height: 50,
                                                                   width: 50,
                                                                   child: Image
@@ -369,8 +368,7 @@ class _QuotesHomePageState extends State<QuotesHomePage> {
                                                                           context)
                                                                       .pop();
                                                                 },
-                                                                child:
-                                                                    Container(
+                                                                child: SizedBox(
                                                                   height: 50,
                                                                   width: 50,
                                                                   child: Image
@@ -402,8 +400,7 @@ class _QuotesHomePageState extends State<QuotesHomePage> {
                                                                           context)
                                                                       .pop();
                                                                 },
-                                                                child:
-                                                                    Container(
+                                                                child: SizedBox(
                                                                   height: 50,
                                                                   width: 50,
                                                                   child: Image
@@ -435,8 +432,7 @@ class _QuotesHomePageState extends State<QuotesHomePage> {
                                                                           context)
                                                                       .pop();
                                                                 },
-                                                                child:
-                                                                    Container(
+                                                                child: SizedBox(
                                                                   height: 50,
                                                                   width: 50,
                                                                   child: Image
@@ -468,8 +464,7 @@ class _QuotesHomePageState extends State<QuotesHomePage> {
                                                                           context)
                                                                       .pop();
                                                                 },
-                                                                child:
-                                                                    Container(
+                                                                child: SizedBox(
                                                                   height: 50,
                                                                   width: 50,
                                                                   child: Image

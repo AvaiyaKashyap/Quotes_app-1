@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:quotes_app/view/screen/quotesHomePage.dart';
 import '../../controller/helper/QuotesGlobal.dart';
 
 class QuotesCategory extends StatefulWidget {
@@ -19,7 +18,6 @@ class _QuotesCategoryState extends State<QuotesCategory> {
           "Best Quotes",
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
-        // actions: [IconButton(onPressed: (){}, icon: Icon(Icons.p))],
       ),
       body: Column(
         children: [
